@@ -26,7 +26,7 @@ def hi():
         </html>
         '''
 
-@app.route('/index')
-@app.route("/")
-def index():
-    return render_template('hello.html')
+@app.route('/index/<user>')
+@app.route("/", defaults={'user':None})
+def index(user):
+    return render_template('hello.html', user=user)
