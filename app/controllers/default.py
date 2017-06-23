@@ -1,11 +1,5 @@
 from app import app
 
-@app.route('/home')
-@app.route('/index')
-@app.route("/")
-def index():
-    return "Página Principal"
-
 @app.route("/hello")
 def hello():
     return "Hello World!"
@@ -17,3 +11,17 @@ def teste(name):
         return 'Olá, %s!' % name
     else:
         return 'Olá usuário!'
+
+@app.route('/index')
+@app.route("/")
+def index():
+    return '''
+    <html>
+    <head>
+       <title> Hello World </title>
+    </head>
+    <body>
+    <h1> Hello World! </h1>
+    </body>
+    </html>
+    '''
