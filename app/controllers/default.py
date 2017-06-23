@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template
+from app.models.forms import LoginForm
 
 @app.route("/hello")
 def hello():
@@ -13,7 +14,7 @@ def teste(name):
     else:
         return 'Olá usuário!'
 
-@app.route('/h1')
+@app.route('/html')
 def hi():
     return '''
         <html>
@@ -27,6 +28,14 @@ def hi():
         '''
 
 @app.route('/index/<user>')
+@app.route('/index', defaults={'user':None})
 @app.route("/", defaults={'user':None})
 def index(user):
-    return render_template('hello.html', user=user)
+    return render_template('index.html',
+                           user=user)
+
+@app.route('/login')
+def login():
+    form = LoginForm()
+    return render_template('login.html',
+                           form=form)
