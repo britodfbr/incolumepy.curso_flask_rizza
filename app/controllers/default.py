@@ -1,4 +1,5 @@
 from app import app
+from flask import render_template
 
 @app.route("/hello")
 def hello():
@@ -12,16 +13,20 @@ def teste(name):
     else:
         return 'Olá usuário!'
 
+@app.route('/h1')
+def hi():
+    return '''
+        <html>
+        <head>
+           <title> Hello World </title>
+        </head>
+        <body>
+        <h1> Hello World! </h1>
+        </body>
+        </html>
+        '''
+
 @app.route('/index')
 @app.route("/")
 def index():
-    return '''
-    <html>
-    <head>
-       <title> Hello World </title>
-    </head>
-    <body>
-    <h1> Hello World! </h1>
-    </body>
-    </html>
-    '''
+    return render_template('hello.html')
