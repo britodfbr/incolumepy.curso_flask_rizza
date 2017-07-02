@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template
+from flask import render_template, url_for
 from app.models.forms import LoginForm
 
 @app.route("/hello")
@@ -34,7 +34,7 @@ def index(user):
     return render_template('index.html',
                            user=user)
 
-@app.route('/login')
+@app.route('/login', methods=['POST', 'GET'])
 def login():
     form = LoginForm()
     return render_template('login.html',
