@@ -1,5 +1,4 @@
 migrations/
-py??
 __pycache__
 *~
 *.py[oc]
@@ -7,3 +6,6 @@ __pycache__
 *.gz
 *.tar
 *.Z
+.idea/
+*.sw[op]
+.tox/
