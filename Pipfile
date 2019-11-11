@@ -6,8 +6,10 @@ verify_ssl = true
 [dev-packages]
 tox = "*"
 v = {editable = true,version = "*"}
+bumpversion = "*"
 
 [packages]
+flask = "*"
 
 [requires]
 python_version = "3.7"
