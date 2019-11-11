@@ -1,0 +1,9 @@
+global-exclude *.py[co] *.csv *.xlsx *.txt *.zip
+exclude src/*
+include docs/*.rst docs/*.md CHANGELOG
+include src/incolumepy/*/version.txt
+
+graft exemplos/caterva
+prune src/testes
+recursive-exclude src/testes *
+recursive-exclude py?? *

@@ -1,5 +1,10 @@
-migrations/
-py??
+.eggs/
+.idea/
+*.egg-info
+*.sw[op]
+.tox
+build/
+dist/
 __pycache__
 *~
 *.py[oc]
