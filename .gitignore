@@ -12,3 +12,6 @@ __pycache__
 *.gz
 *.tar
 *.Z
+.idea/
+*.sw[op]
+.tox/
