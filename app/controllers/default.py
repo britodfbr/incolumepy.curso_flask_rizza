@@ -9,10 +9,7 @@ def index():
     return "Hello World!"
 
 
-@app.route("/test/", defaults={'name': None})
+@app.route("/test/", defaults={'name': 'visitante'})
 @app.route("/test/<name>")
 def teste(name):
-    if name:
-        return 'Olá %s!' % name
-    else:
-        return "Olá visitante!"
+    return 'Olá %s!' % name.title()
