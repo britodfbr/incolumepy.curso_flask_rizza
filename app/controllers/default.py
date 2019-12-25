@@ -11,15 +11,14 @@ def index():
 
 @app.route("/test/<float:obj>")
 @app.route("/test/<int:obj>")
-@app.route("/test/", defaults={'obj': 'visitante'})
 @app.route("/test/<obj>")
+@app.route("/test/", defaults={'obj': 'visitante'})
 def test(obj):
-    tip = type(obj)
-    print(type(obj))
-    print(tip)
+    t = str(type(obj))
+    print(t)
     return {
+        "<class 'int'>": 'int: %s.' % obj,
+        "<class 'float'>": 'float: %s.' % obj,
         "<class 'str'>": 'Olá %s!' % obj,
-        "<class 'int'>": str(obj),
-        "<class 'float'>": str(obj),
-        }.get(tip, '')
+    }.get(t, 'Ops..')
 
