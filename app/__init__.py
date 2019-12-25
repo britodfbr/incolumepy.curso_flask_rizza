@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager
 
-__version__ = '0.0.4-dev0'
+__version__ = '0.0.4'
 template_dir = os.path.join(os.path.dirname(__file__), 'views', 'templates')
 static_dir = os.path.join(os.path.dirname(__file__), 'views', 'static')
 
