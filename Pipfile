@@ -11,6 +11,7 @@ verify_ssl = true
 [dev-packages]
 flask = "*"
 flask-sqlalchemy = "*"
+bumpversion = "*"
 
 [packages]
 
