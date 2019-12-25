@@ -1,12 +1,4 @@
-import os
-import sys
 from app import app
-
-
-@app.route('/index')
-@app.route("/")
-def index():
-    return "Hello World!"
 
 
 @app.route("/test/<float:obj>")
@@ -21,4 +13,13 @@ def test(obj):
         "<class 'float'>": 'float: %s.' % obj,
         "<class 'str'>": 'Olá %s!' % obj.title() if isinstance(obj, str) else obj,
     }.get(t, 'Ops..')
+
+
+@app.route('/index')
+@app.route("/")
+def index():
+    return """
+    <html>
+    <head><title> Página 1 </title></head>
+    Hello World!</html>"""
 
