@@ -19,6 +19,6 @@ def test(obj):
     return {
         "<class 'int'>": 'int: %s.' % obj,
         "<class 'float'>": 'float: %s.' % obj,
-        "<class 'str'>": 'Olá %s!' % obj,
+        "<class 'str'>": 'Olá %s!' % obj.title() if isinstance(obj, str) else obj,
     }.get(t, 'Ops..')
 
