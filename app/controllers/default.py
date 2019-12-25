@@ -1,3 +1,4 @@
+from flask import render_template
 from app import app
 
 
@@ -18,8 +19,5 @@ def test(obj):
 @app.route('/index')
 @app.route("/")
 def index():
-    return """
-    <html>
-    <head><title> Página 1 </title></head>
-    Hello World!</html>"""
+    return render_template("helloworld.html")
 
