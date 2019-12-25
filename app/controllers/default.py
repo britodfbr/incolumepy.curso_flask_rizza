@@ -11,5 +11,11 @@ def index():
 
 @app.route("/test/", defaults={'name': 'visitante'})
 @app.route("/test/<name>")
-def teste(name):
+def test(name):
     return 'Olá %s!' % name.title()
+
+
+@app.route("/test/<int:oid>")
+def test2(oid):
+    print(type(oid))
+    return str(oid)
