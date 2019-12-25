@@ -10,8 +10,8 @@ def index():
 
 
 @app.route("/test/<float:obj>")
-@app.route("/test/<int:obj>")
-@app.route("/test/<obj>")
+@app.route("/test/<int:obj>", methods=['GET'])
+@app.route("/test/<obj>", methods=['GET'])
 @app.route("/test/", defaults={'obj': 'visitante'})
 def test(obj):
     t = str(type(obj))
