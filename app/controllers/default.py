@@ -19,3 +19,9 @@ def test(name):
 def test2(oid):
     print(type(oid))
     return str(oid)
+
+
+@app.route("/test/<float:oid>")
+def test3(oid):
+    print(type(oid))
+    return str(oid)
