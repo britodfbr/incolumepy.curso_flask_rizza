@@ -9,7 +9,7 @@ template_dir = os.path.join(os.path.dirname(__file__), 'views', 'templates')
 static_dir = os.path.join(os.path.dirname(__file__), 'views', 'static')
 
 app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///storage.db'
+app.config.from_object('configure')
 db = SQLAlchemy(app)
 
 migrate = Migrate(app, db)
