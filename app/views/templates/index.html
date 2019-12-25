@@ -6,6 +6,12 @@
 </head>
 <body>
 <h1>Toilter</h1>
-<b>Bem vindo ao Toilter!</b>
+{% if user %}
+<p>Bem vindo ao Toilter, <b>{{ user }}</b>!</p>
+{% else %}
+<p>
+    <b>Bem vindo ao Toilter!</b>
+</p>
+{% endif %}
 </body>
 </html>

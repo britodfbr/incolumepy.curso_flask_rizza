@@ -16,8 +16,9 @@ def test(obj):
     }.get(t, 'Ops..')
 
 
-@app.route('/index')
-@app.route("/")
-def index():
-    return render_template("index.html")
+@app.route('/index/<user>')
+@app.route("/", defaults={'user': None})
+@app.route("/index/", defaults={'user': None})
+def index(user):
+    return render_template("index.html", user=user)
 
