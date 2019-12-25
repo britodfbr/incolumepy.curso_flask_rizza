@@ -9,6 +9,6 @@ def index():
     return "Hello World!"
 
 
-@app.route("/teste")
-def teste():
-    return 'Olá!'
+@app.route("/test/<name>")
+def teste(name):
+    return 'Olá %s!' % name
