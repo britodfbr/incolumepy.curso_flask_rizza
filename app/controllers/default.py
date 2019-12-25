@@ -19,5 +19,5 @@ def test(obj):
 @app.route('/index')
 @app.route("/")
 def index():
-    return render_template("helloworld.html")
+    return render_template("index.html")
 
