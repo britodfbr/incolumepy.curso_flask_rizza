@@ -9,9 +9,9 @@ def index():
     return "Hello World!"
 
 
-@app.route("/test/")
+@app.route("/test/", defaults={'name': None})
 @app.route("/test/<name>")
-def teste(name=None):
+def teste(name):
     if name:
         return 'Olá %s!' % name
     else:
