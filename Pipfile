@@ -1,0 +1,18 @@
+[[source]]
+name = "mypypi"
+url = "http://localhost:3141/root/pypi/+simple/"
+verify_ssl = false
+
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flask = "*"
+flask-sqlalchemy = "*"
+
+[packages]
+
+[requires]
+python_version = "3.7"
