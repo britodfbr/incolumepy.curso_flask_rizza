@@ -1,7 +1,8 @@
 import os
-import sys
 from flask import Flask
 
-app = Flask(__name__)
+template_dir = os.path.join(os.path.dirname(__file__), 'views', 'templates')
+static_dir = os.path.join(os.path.dirname(__file__), 'views', 'static')
+app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 
 from app.controllers import default
