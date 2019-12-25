@@ -12,6 +12,8 @@ verify_ssl = true
 flask = "*"
 flask-sqlalchemy = "*"
 bumpversion = "*"
+flask-migrate = "*"
+flask-script = "*"
 
 [packages]
 
