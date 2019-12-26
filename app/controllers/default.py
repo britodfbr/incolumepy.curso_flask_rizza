@@ -22,3 +22,7 @@ def test(obj):
 def index(user):
     return render_template("base.html", user=user)
 
+
+@app.route('/login')
+def login():
+    return render_template("login.html")
