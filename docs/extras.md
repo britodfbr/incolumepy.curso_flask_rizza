@@ -6,5 +6,8 @@ python run.py db upgrade
 ```
 
 ### Rodar o servidor em foreground
-```python run.py runserver``
-`
+```python run.py runserver```
+
+
+### Secret key
+https://docs.python.org/3/library/secrets.html
