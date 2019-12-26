@@ -24,7 +24,10 @@ def index(user):
     return render_template("new_index.html", user=user)
 
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     login_form = LoginForm()
+    if login_form.validate_on_submit():
+        print(login_form.username.data)
+        print(login_form.password.data)
     return render_template("login.html", form=login_form)
