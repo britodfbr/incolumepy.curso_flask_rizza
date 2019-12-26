@@ -21,7 +21,7 @@ def test(obj):
 @app.route("/index/", defaults={'user': None})
 @app.route("/", defaults={'user': None})
 def index(user):
-    return render_template("new_index.html", user=user)
+    return render_template("new_index.html", username=user)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -30,4 +30,6 @@ def login():
     if login_form.validate_on_submit():
         print(login_form.username.data)
         print(login_form.password.data)
+    else:
+        print(login_form.errors)
     return render_template("login.html", form=login_form)
