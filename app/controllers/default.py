@@ -17,8 +17,8 @@ def test(obj):
 
 
 @app.route('/index/<user>')
-@app.route("/", defaults={'user': None})
 @app.route("/index/", defaults={'user': None})
+@app.route("/", defaults={'user': None})
 def index(user):
     return render_template("index.html", user=user)
 
