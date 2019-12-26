@@ -11,3 +11,7 @@ python run.py db upgrade
 
 ### Secret key
 https://docs.python.org/3/library/secrets.html
+
+
+### Fazer exemplo
+https://teamtreehouse.com/community/getting-builtinstypeerror-typeerror-init-takes-from-1-to-2-positional-arguments-but-3-were-given

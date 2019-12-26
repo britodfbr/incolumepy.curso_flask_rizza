@@ -3,7 +3,8 @@
 {% block content %}
 <div class="col-md-4 col-md-offset-4">
   <h2>Login</h2>
-<form action="" method="post">
+<form action="" method="POST">
+  {{ form.csrf_token }}
   <div class="form-group">
     {{ form.username.label }}
     {{ form.username(class='form-control',  placeholder="usuário de login") }}
