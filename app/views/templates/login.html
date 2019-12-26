@@ -8,10 +8,24 @@
   <div class="form-group">
     {{ form.username.label }}
     {{ form.username(class='form-control',  placeholder="usuário de login") }}
+    <div class="alert alert-danger" role="alert">
+      <ul>
+        {% for e in form.errors.username %}
+        <li>{{ e }}</li>
+        {% endfor %}
+      </ul>
+    </div>    
   </div>
   <div class="form-group">
     {{ form.password.label }}
     {{ form.password(class='form-control') }}
+    <div class="alert alert-danger" role="alert">
+      <ul>
+        {% for e in form.errors.password %}
+        <li>{{ e }}</li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
   <div class="checkbox">
       {{ form.rememberme() }} {{ form.rememberme.label }}
