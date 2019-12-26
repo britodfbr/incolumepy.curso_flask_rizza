@@ -20,7 +20,7 @@ def test(obj):
 @app.route("/index/", defaults={'user': None})
 @app.route("/", defaults={'user': None})
 def index(user):
-    return render_template("base.html", user=user)
+    return render_template("new_index.html", user=user)
 
 
 @app.route('/login')
