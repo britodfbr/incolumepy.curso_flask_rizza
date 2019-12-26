@@ -1,5 +1,6 @@
 from flask import render_template
 from app import app
+from app.models.login import LoginForm
 
 
 @app.route("/test/<float:obj>")
@@ -25,4 +26,5 @@ def index(user):
 
 @app.route('/login')
 def login():
-    return render_template("login.html")
+    login_form = LoginForm()
+    return render_template("login.html", form=login_form)
