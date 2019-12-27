@@ -10,10 +10,15 @@ static_dir = os.path.join(os.path.dirname(__file__), 'views', 'static')
 
 app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 app.config.from_object('configure')
-db = SQLAlchemy(app)
 
+db = SQLAlchemy(app)
+with app.test_request_context():
+    db.create_all()
+db.init_app(app)
 migrate = Migrate(app, db)
 manager = Manager(app)
 manager.add_command('db', MigrateCommand)
 
+
+from app.models import login, user, post, follow
 from app.controllers import default
